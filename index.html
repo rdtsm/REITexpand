@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REITs and Top 10 Holdings Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .etf-row {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .holding-row {
+            display: none; /* Hidden by default */
+            background-color: #f0f8ff;
+        }
+        .holding-row.visible {
+            display: table-row; /* Show when toggled */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const etfRows = document.querySelectorAll(".etf-row");
+            etfRows.forEach(row => {
+                row.addEventListener("click", function() {
+                    const etfId = this.dataset.etf;
+                    const holdings = document.querySelectorAll(`.holding-row[data-etf="${etfId}"]`);
+                    holdings.forEach(holding => {
+                        holding.classList.toggle("visible");
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>REIT Name</th>
+                <th>Ticker</th>
+                <th>Exchange</th>
+                <th>Geographic Coverage</th>
+                <th>Sector Focus</th>
+                <th>Yield (Pre-Tax)</th>
+                <th>Market Cap (Approx.)</th>
+                <th>Expense Ratio (ETFs)</th>
+                <th>Why Consider</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Lion-Phillip S-REIT ETF -->
+            <tr class="etf-row" data-etf="lion-phillip">
+                <td>Lion-Phillip S-REIT ETF</td>
+                <td>CLR</td>
+                <td>SGX</td>
+                <td>Singapore</td>
+                <td>Mixed (Retail, Office, Industrial)</td>
+                <td>~5-6%</td>
+                <td>~S$300M</td>
+                <td>~0.50%</td>
+                <td>Diversified S-REIT exposure, tax-efficient</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>CapitaLand Integrated Commercial Trust</td>
+                <td>C38U</td>
+                <td>SGX</td>
+                <td>Singapore</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$13B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Ascendas REIT</td>
+                <td>A17U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, UK, Europe</td>
+                <td>Industrial, Business Parks</td>
+                <td>~5.5%</td>
+                <td>~S$11B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Mapletree Logistics Trust</td>
+                <td>M44U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, China, Japan</td>
+                <td>Logistics/Industrial</td>
+                <td>~6%</td>
+                <td>~S$6B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Mapletree Pan Asia Commercial Trust</td>
+                <td>N2IU</td>
+                <td>SGX</td>
+                <td>Singapore, China, HK, Japan</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$7B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Frasers Logistics & Commercial Trust</td>
+                <td>BUOU</td>
+                <td>SGX</td>
+                <td>Australia, Singapore, Germany, UK</td>
+                <td>Logistics, Commercial</td>
+                <td>~6%</td>
+                <td>~S$4B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Keppel DC REIT</td>
+                <td>AJBU</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Europe</td>
+                <td>Data Centres</td>
+                <td>~5%</td>
+                <td>~S$3.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Suntec REIT</td>
+                <td>T82U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Parkway Life REIT</td>
+                <td>C2PU</td>
+                <td>SGX</td>
+                <td>Singapore, Japan, Malaysia</td>
+                <td>Healthcare</td>
+                <td>~4%</td>
+                <td>~S$2.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>CapitaLand Ascott Trust</td>
+                <td>HMN</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Japan, Europe</td>
+                <td>Hospitality</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="lion-phillip">
+                <td>Keppel REIT</td>
+                <td>K71U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia</td>
+                <td>Office</td>
+                <td>~5%</td>
+                <td>~S$3.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <!-- NikkoAM-Straits Trading Asia ex Japan REIT ETF -->
+            <tr class="etf-row" data-etf="nikkoam">
+                <td>NikkoAM-Straits Trading Asia ex Japan REIT ETF</td>
+                <td>CFA</td>
+                <td>SGX</td>
+                <td>Singapore, Asia-Pacific ex-Japan</td>
+                <td>Mixed</td>
+                <td>~5.5%</td>
+                <td>~S$200M</td>
+                <td>~0.55%</td>
+                <td>Regional diversification, low cost</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>CapitaLand Integrated Commercial Trust</td>
+                <td>C38U</td>
+                <td>SGX</td>
+                <td>Singapore</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$13B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Ascendas REIT</td>
+                <td>A17U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, UK, Europe</td>
+                <td>Industrial, Business Parks</td>
+                <td>~5.5%</td>
+                <td>~S$11B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Link REIT</td>
+                <td>0823</td>
+                <td>HKEX</td>
+                <td>Hong Kong, China, Australia</td>
+                <td>Retail, Office</td>
+                <td>~5-6%</td>
+                <td>~HK$90B (~S$15B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Mapletree Logistics Trust</td>
+                <td>M44U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, China, Japan</td>
+                <td>Logistics/Industrial</td>
+                <td>~6%</td>
+                <td>~S$6B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Mapletree Pan Asia Commercial Trust</td>
+                <td>N2IU</td>
+                <td>SGX</td>
+                <td>Singapore, China, HK, Japan</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$7B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Frasers Logistics & Commercial Trust</td>
+                <td>BUOU</td>
+                <td>SGX</td>
+                <td>Australia, Singapore, Germany, UK</td>
+                <td>Logistics, Commercial</td>
+                <td>~6%</td>
+                <td>~S$4B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Suntec REIT</td>
+                <td>T82U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Fortune REIT</td>
+                <td>0778</td>
+                <td>HKEX</td>
+                <td>Hong Kong</td>
+                <td>Retail</td>
+                <td>~6-7%</td>
+                <td>~HK$8B (~S$1.3B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>Keppel DC REIT</td>
+                <td>AJBU</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Europe</td>
+                <td>Data Centres</td>
+                <td>~5%</td>
+                <td>~S$3.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="nikkoam">
+                <td>CapitaLand Ascott Trust</td>
+                <td>HMN</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Japan, Europe</td>
+                <td>Hospitality</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <!-- CSOP iEdge S-REIT Leaders ETF -->
+            <tr class="etf-row" data-etf="csop">
+                <td>CSOP iEdge S-REIT Leaders ETF</td>
+                <td>SRT</td>
+                <td>SGX</td>
+                <td>Singapore</td>
+                <td>Mixed (Top 20 S-REITs)</td>
+                <td>~6%</td>
+                <td>~S$100M</td>
+                <td>~0.60%</td>
+                <td>Focus on leading S-REITs, high yield</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>CapitaLand Integrated Commercial Trust</td>
+                <td>C38U</td>
+                <td>SGX</td>
+                <td>Singapore</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$13B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Ascendas REIT</td>
+                <td>A17U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, UK, Europe</td>
+                <td>Industrial, Business Parks</td>
+                <td>~5.5%</td>
+                <td>~S$11B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Mapletree Logistics Trust</td>
+                <td>M44U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, China, Japan</td>
+                <td>Logistics/Industrial</td>
+                <td>~6%</td>
+                <td>~S$6B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Mapletree Pan Asia Commercial Trust</td>
+                <td>N2IU</td>
+                <td>SGX</td>
+                <td>Singapore, China, HK, Japan</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$7B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Frasers Logistics & Commercial Trust</td>
+                <td>BUOU</td>
+                <td>SGX</td>
+                <td>Australia, Singapore, Germany, UK</td>
+                <td>Logistics, Commercial</td>
+                <td>~6%</td>
+                <td>~S$4B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Keppel DC REIT</td>
+                <td>AJBU</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Europe</td>
+                <td>Data Centres</td>
+                <td>~5%</td>
+                <td>~S$3.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Suntec REIT</td>
+                <td>T82U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>CapitaLand Ascott Trust</td>
+                <td>HMN</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Japan, Europe</td>
+                <td>Hospitality</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Keppel REIT</td>
+                <td>K71U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia</td>
+                <td>Office</td>
+                <td>~5%</td>
+                <td>~S$3.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="csop">
+                <td>Lendlease Global Commercial REIT</td>
+                <td>JYEU</td>
+                <td>SGX</td>
+                <td>Singapore, Italy</td>
+                <td>Retail</td>
+                <td>~6%</td>
+                <td>~S$1.5B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <!-- CapitaLand Integrated Commercial Trust -->
+            <tr>
+                <td>CapitaLand Integrated Commercial Trust</td>
+                <td>C38U</td>
+                <td>SGX</td>
+                <td>Singapore (mostly)</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$13B</td>
+                <td>N/A (Stock)</td>
+                <td>Largest S-REIT, stable prime properties</td>
+            </tr>
+            <!-- Mapletree Logistics Trust -->
+            <tr>
+                <td>Mapletree Logistics Trust</td>
+                <td>M44U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, China, Japan, etc.</td>
+                <td>Logistics/Industrial</td>
+                <td>~6%</td>
+                <td>~S$6B</td>
+                <td>N/A (Stock)</td>
+                <td>Strong Asia-Pacific logistics exposure</td>
+            </tr>
+            <!-- Ascendas REIT -->
+            <tr>
+                <td>Ascendas REIT</td>
+                <td>A17U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, UK, Europe</td>
+                <td>Industrial, Business Parks</td>
+                <td>~5.5%</td>
+                <td>~S$11B</td>
+                <td>N/A (Stock)</td>
+                <td>Tech-driven, multi-region</td>
+            </tr>
+            <!-- Mapletree Pan Asia Commercial Trust -->
+            <tr>
+                <td>Mapletree Pan Asia Commercial Trust</td>
+                <td>N2IU</td>
+                <td>SGX</td>
+                <td>Singapore, China, HK, Japan, S. Korea</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$7B</td>
+                <td>N/A (Stock)</td>
+                <td>Broad Asian commercial exposure</td>
+            </tr>
+            <!-- Frasers Logistics & Commercial Trust -->
+            <tr>
+                <td>Frasers Logistics & Commercial Trust</td>
+                <td>BUOU</td>
+                <td>SGX</td>
+                <td>Australia, Singapore, Germany, UK, etc.</td>
+                <td>Logistics, Commercial</td>
+                <td>~6%</td>
+                <td>~S$4B</td>
+                <td>N/A (Stock)</td>
+                <td>Asia + Europe logistics focus</td>
+            </tr>
+            <!-- CapitaLand Ascott Trust -->
+            <tr>
+                <td>CapitaLand Ascott Trust</td>
+                <td>HMN</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, Japan, Europe, etc.</td>
+                <td>Hospitality</td>
+                <td>~5.5%</td>
+                <td>~S$3B</td>
+                <td>N/A (Stock)</td>
+                <td>Global hospitality, most diverse</td>
+            </tr>
+            <!-- Phillip SGX APAC Dividend Leaders REIT ETF -->
+            <tr class="etf-row" data-etf="phillip">
+                <td>Phillip SGX APAC Dividend Leaders REIT ETF</td>
+                <td>BYJ/BYI</td>
+                <td>SGX</td>
+                <td>Asia-Pacific ex-Japan (SG, AU, HK, etc.)</td>
+                <td>Mixed (Top 30 REITs)</td>
+                <td>~4-5%</td>
+                <td>~S$50-100M (est.)</td>
+                <td>~0.30%</td>
+                <td>Broad APAC exposure, high dividend focus</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Link REIT</td>
+                <td>0823</td>
+                <td>HKEX</td>
+                <td>Hong Kong, China, Australia</td>
+                <td>Retail, Office</td>
+                <td>~5-6%</td>
+                <td>~HK$90B (~S$15B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Scentre Group</td>
+                <td>SCG</td>
+                <td>ASX</td>
+                <td>Australia</td>
+                <td>Retail</td>
+                <td>~5%</td>
+                <td>~A$14B (~S$12B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Mirvac Group</td>
+                <td>MGR</td>
+                <td>ASX</td>
+                <td>Australia</td>
+                <td>Diversified</td>
+                <td>~4.5%</td>
+                <td>~A$8B (~S$7B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Stockland</td>
+                <td>SGP</td>
+                <td>ASX</td>
+                <td>Australia</td>
+                <td>Diversified</td>
+                <td>~5%</td>
+                <td>~A$10B (~S$8B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>CapitaLand Integrated Commercial Trust</td>
+                <td>C38U</td>
+                <td>SGX</td>
+                <td>Singapore</td>
+                <td>Retail, Office</td>
+                <td>~5.5%</td>
+                <td>~S$13B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Ascendas REIT</td>
+                <td>A17U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, UK, Europe</td>
+                <td>Industrial, Business Parks</td>
+                <td>~5.5%</td>
+                <td>~S$11B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Dexus</td>
+                <td>DXS</td>
+                <td>ASX</td>
+                <td>Australia</td>
+                <td>Office, Industrial</td>
+                <td>~5%</td>
+                <td>~A$9B (~S$7.5B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Mapletree Logistics Trust</td>
+                <td>M44U</td>
+                <td>SGX</td>
+                <td>Singapore, Australia, China, Japan</td>
+                <td>Logistics/Industrial</td>
+                <td>~6%</td>
+                <td>~S$6B</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>GPT Group</td>
+                <td>GPT</td>
+                <td>ASX</td>
+                <td>Australia</td>
+                <td>Diversified</td>
+                <td>~4.5%</td>
+                <td>~A$8B (~S$7B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="holding-row" data-etf="phillip">
+                <td>Charter Hall Retail REIT</td>
+                <td>CQR</td>
+                <td>ASX</td>
+                <td>Australia</td>
+                <td>Retail</td>
+                <td>~5.5%</td>
+                <td>~A$2B (~S$1.7B)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <!-- Link REIT -->
+            <tr>
+                <td>Link REIT</td>
+                <td>0823</td>
+                <td>HKEX</td>
+                <td>Hong Kong, China, Australia</td>
+                <td>Retail, Office</td>
+                <td>~5-6%</td>
+                <td>~HK$90B (~S$15B)</td>
+                <td>N/A (Stock)</td>
+                <td>Largest Asian REIT, Greater China focus</td>
+            </tr>
+            <!-- Fortune REIT -->
+            <tr>
+                <td>Fortune REIT</td>
+                <td>0778</td>
+                <td>HKEX</td>
+                <td>Hong Kong</td>
+                <td>Retail</td>
+                <td>~6-7%</td>
+                <td>~HK$8B (~S$1.3B)</td>
+                <td>N/A (Stock)</td>
+                <td>High-yield HK retail play</td>
+            </tr>
+            <!-- Hui Xian REIT -->
+            <tr>
+                <td>Hui Xian REIT</td>
+                <td>87001</td>
+                <td>HKEX</td>
+                <td>Mainland China (Beijing, Guangzhou)</td>
+                <td>Retail, Office, Hotels</td>
+                <td>~6%</td>
+                <td>~HK$4B (~S$700M)</td>
+                <td>N/A (Stock)</td>
+                <td>China-focused, HK-listed</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
